@@ -1,0 +1,37 @@
+class Heroi {
+    constructor(Nome, Tipo) {
+        this.Nome = Nome;
+        this.Tipo = Tipo;
+    }
+
+    atacar() {
+        let Ataque;
+        switch (this.Tipo) {
+            case "Magia":
+                Ataque = "magia";
+                break;
+            case "Artes marciais":
+                Ataque = "artes marciais";
+                break;
+            case "Espada":
+                Ataque = "espada";
+                break;
+            case "Shuriken":
+                Ataque = "shuriken";
+                break;
+            default:
+                Ataque = "ataque genérico";
+        }
+        console.log(`O ${this.Nome} atacou usando ${Ataque}`);
+    }
+}
+
+let mago = new Heroi("Mago", "Magia");
+let monje = new Heroi("Monje", "Artes marciais");
+let guerreiro = new Heroi("Guerreiro", "Espada");
+let ninja = new Heroi("Ninja", "Shuriken");
+
+mago.atacar();
+monje.atacar();
+guerreiro.atacar();
+ninja.atacar();
